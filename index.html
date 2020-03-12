@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Cubo 3D</title>
+    
+    <link rel="stylesheet" href="styles.css" >
+</head>
+<body>
+
+    <div class="cube-container">
+        <div class="cube initial-position">
+            <img src="imgs/one.jpg" alt="" class="cube-face-image image-1">
+            <img src="imgs/two.jpg" alt="" class="cube-face-image image-2">
+            <img src="imgs/three.jpg" alt="" class="cube-face-image image-3">
+            <img src="imgs/four.jpg" alt="" class="cube-face-image image-4">
+            <img src="imgs/five.jpg" alt="" class="cube-face-image image-5">
+            <img src="imgs/six.jpg" alt="" class="cube-face-image image-6">
+        </div>
+    </div><!-- Fim cube-container -->
+
+    <div class="image-buttons">
+        <input type="image" class="show-image-1" src="imgs/1.jpg"></input>
+        <input type="image" class="show-image-2" src="imgs/2.jpg"></input>
+        <input type="image" class="show-image-3" src="imgs/3.jpg"></input>
+        <input type="image" class="show-image-4" src="imgs/4.jpg"></input>
+        <input type="image" class="show-image-5" src="imgs/5.jpg"></input>
+        <input type="image" class="show-image-6" src="imgs/6.jpg"></input>
+    </div><!-- Fim image-buttons -->
+    
+    
+    <script>
+        "use strict";
+
+        window.addEventListener("DOMContentLoaded",
+        function(){
+            var cube = document.querySelector(".cube"),
+            imageBUttons = document.querySelector(".image-buttons");
+
+            var cubeImageClass = cube.classList[1];
+
+            imageBUttons.addEventListener("click", function(e){
+                var targetNode = e.target.nodeName,
+                targetClass = e.target.className;
+
+                if(targetNode === "INPUT" && targetClass !== cubeImageClass){
+                    console.log("show image: ".concat(targetClass.charAt(11)));
+
+                    cube.classList.replace(cubeImageClass, targetClass);
+
+                    cubeImageClass = targetClass;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

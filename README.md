@@ -58,3 +58,7 @@
 ![Demonstration](https://github.com/jeffersonvidal/galeria-cubo-3d/blob/master/screenshots/demo.gif?raw=true)
 
 ![Screen1](https://github.com/jeffersonvidal/galeria-cubo-3d/blob/master/screenshots/screen1.PNG?raw=true)
+
+---
+
+Made with ♥ by [Jefferson Vidal](https://github.com/jeffersonvidal)
